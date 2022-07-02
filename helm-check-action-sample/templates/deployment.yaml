@@ -8,8 +8,6 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
-  matchLabels:
-    app: nginx
   replicas: {{ .Values.replicaCount }}
   template:
     metadata:
