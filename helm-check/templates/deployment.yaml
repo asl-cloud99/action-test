@@ -10,7 +10,7 @@ metadata:
 spec:
   matchLabels:
     app: nginx
-  replicas: {{ .Values.replicaCount }}
+  replicas: 
   template:
     metadata:
       labels:
