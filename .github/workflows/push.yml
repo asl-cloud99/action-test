@@ -1,7 +1,25 @@
 on: push
 name: Main
 jobs:
+  helm-check-tmp:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: helm-check
+      uses: igabaydulin/helm-check-action@0.1.4
+      env:
+        CHART_LOCATION: ./helm-check-tmp
+        CHART_VALUES: ./helm-check-tmp/values/test.yaml
   helm-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: helm-check
+      uses: igabaydulin/helm-check-action@0.1.4
+      env:
+        CHART_LOCATION: ./helm-check
+        CHART_VALUES: ./helm-check/values/test.yaml
+  helm-check-action-sample:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
