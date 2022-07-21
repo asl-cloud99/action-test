@@ -11,7 +11,7 @@ New GitHub Actions editor looks like this:
 <p align="center">
   <img src="https://github.com/igabaydulin/helm-check-action-sample/blob/master/resources/new-action-settings.png">
 </p>
-
+assa
 ## Workflow output
 
 [Here](https://github.com/igabaydulin/helm-check-action-sample/runs/202646599) is an output example
