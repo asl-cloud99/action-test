@@ -28,3 +28,11 @@ jobs:
       with:
         path: ./helm-check-action-sample
         config:  ./helm-check-action-sample/Chart.yaml
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - id: validate
+        uses: elifesciences/helm-validator-action@master
+        with:
+          chartPath: ./helm-check-action-sample
