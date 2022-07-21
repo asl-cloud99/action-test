@@ -19,12 +19,11 @@ jobs:
       env:
         CHART_LOCATION: ./helm-check
         CHART_VALUES: ./helm-check/values/test.yaml
-  helm-check-action-sample:
+  kubeval:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: helm-check
-      uses: igabaydulin/helm-check-action@0.1.4
-      env:
-        CHART_LOCATION: ./helm-check-action-sample
-        CHART_VALUES: ./helm-check-action-sample/values/test.yaml
+    - name: test
+      uses: desaintmartin/helm-kubeval-action@master
+      with:
+        path: ./helm-check-action-sample
