@@ -27,3 +27,4 @@ jobs:
       uses: desaintmartin/helm-kubeval-action@master
       with:
         path: ./helm-check-action-sample
+        config:  ./helm-check-action-sample/values/test.yaml
